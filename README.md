@@ -1,3 +1,6 @@
-# gatsby-starter-default-i18n
+# OneLedger website
 
-Moved to Monorepo -> https://github.com/angeloocana/gatsby-plugin-i18n/tree/master/packages/gatsby-starter-default-i18n
+Built using:
+- React
+- Gatsby
+- DatoCMS
