@@ -9,7 +9,7 @@ const IndexPage = ({ data }) => {
       <h1>{header}</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
-      <Link to="/en/page-2/">Go to page 2</Link>
+      <Link to="/zh/page-2/">Go to page 2</Link>
     </div>
   );
 };
@@ -17,8 +17,8 @@ const IndexPage = ({ data }) => {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query IndexEnQuery {
-    datoCmsHomePage(locale: { eq: "en" }) {
+  query IndexZhQuery {
+    datoCmsHomePage(locale: { eq: "zh" }) {
       header
     }
   }
