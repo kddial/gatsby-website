@@ -14,7 +14,7 @@ class RedirectIndex extends React.PureComponent {
       const homeUrl = withPrefix(`/${langKey}/`);
 
       // I don`t think this is the best solution
-      // I would like to use Gatsby Redirects like: 
+      // I would like to use Gatsby Redirects like:
       // https://github.com/gatsbyjs/gatsby/tree/master/examples/using-redirects
       // But Gatsby Redirects are static, they need to be specified at build time,
       // This redirect is dynamic, It needs to know the user browser language.
@@ -31,9 +31,9 @@ class RedirectIndex extends React.PureComponent {
 export default RedirectIndex;
 
 export const pageQuery = graphql`
-  query IndexQuery {    
-    site{
-      siteMetadata{
+  query IndexQuery {
+    site {
+      siteMetadata {
         languages {
           defaultLangKey
           langs
