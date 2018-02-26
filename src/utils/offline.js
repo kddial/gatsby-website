@@ -1,5 +1,5 @@
 // todo: fix, doesnt work :(
-export const offlineGraphQLquery = (id) => (
+export const offlineGraphQLquery = id =>
   `
     query OfflineQuery${id} {
       site {
@@ -8,5 +8,4 @@ export const offlineGraphQLquery = (id) => (
         }
       }
     }
-  `
-);
+  `;

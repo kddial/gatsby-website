@@ -3,7 +3,10 @@ import Link from 'gatsby-link';
 import graphql from 'graphql';
 
 const IndexPage = ({ data }) => {
-  const header = data && data.datoCmsHomePage && data.datoCmsHomePage.header ? data.datoCmsHomePage.header : '';
+  const header =
+    data && data.datoCmsHomePage && data.datoCmsHomePage.header
+      ? data.datoCmsHomePage.header
+      : '';
 
   return (
     <div>

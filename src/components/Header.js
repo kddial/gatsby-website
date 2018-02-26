@@ -1,21 +1,30 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
 import SelectLanguage from './SelectLanguage';
-// import { css } from ''
+import { css } from 'emotion';
+import styled from 'react-emotion';
 
-const Header = (props) => (
+const BlueDiv = styled('div')`
+  background-color: indianred;
+  width: 100px;
+  height: 100px;  
+`;
+
+const Header = props => (
   <div
     css={`
       background-color: lightpink;
-    `}>
+    `}
+  >
     <div>
-      <h1>
-        <Link to="/">
-        </Link>
-      </h1>
+      <div className={css`
+        background-color: hotpink;
+        width: 100px;
+        height: 100px;
+      `} />
+      <BlueDiv />
       <SelectLanguage langs={props.langs} />
     </div>
   </div>
-)
+);
 
 export default Header;

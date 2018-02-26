@@ -1,7 +1,7 @@
 import React from 'react';
 import graphql from 'graphql';
 import { getUserLangKey } from 'ptz-i18n';
-import { withPrefix } from "gatsby-link";
+import { withPrefix } from 'gatsby-link';
 
 class RedirectIndex extends React.PureComponent {
   constructor(args) {
@@ -24,7 +24,7 @@ class RedirectIndex extends React.PureComponent {
   }
 
   render() {
-    return (<div />);
+    return <div />;
   }
 }
 
