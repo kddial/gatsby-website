@@ -13,6 +13,7 @@
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-source-datocms": "^1.0.26",
     "intl": "^1.2.5",
+    "normalize.css": "^8.0.0",
     "react-emotion": "^9.0.2",
     "react-intl": "^2.4.0"
   },

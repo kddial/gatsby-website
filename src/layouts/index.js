@@ -1,11 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from '../components/Header';
+import styled, { injectGlobal } from 'react-emotion';
 import Helmet from 'react-helmet';
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 import { IntlProvider } from 'react-intl';
 import 'intl';
-import './index.css';
+import Header from '../components/Header/Header';
+import colors from '../utils/colors';
+
+// Global styles
+import normalize from 'normalize.css';
+injectGlobal`
+  * {
+      font-family: -apple-system, BlinkMacSystemFont,
+             'avenir next', avenir,
+             'helvetica neue', helvetica,
+             ubuntu,
+             roboto, noto,
+             'segoe ui', arial,
+             sans-serif;
+      box-sizing: border-box;
+  };
+  a {
+    text-decoration: none;
+    color: inherit;
+  };
+  a:hover {
+    cursor: pointer;
+  };
+  h1, h2, h3, h4, h5, h6 {
+    color: ${colors.secondary}
+  };
+  p {
+    color: ${colors.accent}
+  }
+`;
 
 const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
   const url = location.pathname;
@@ -20,8 +49,8 @@ const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
         <Helmet
           title="OneLedger"
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'OneLedger' },
+            { name: 'keywords', content: 'blockchain, ledger' },
           ]}
         />
         <Header langs={langsMenu} />
