@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 import { IntlProvider } from 'react-intl';
 import 'intl';
-import Header from '../components/Header/Header';
+import Header from '../components/Navigation/Navigation';
 import colors from '../utils/colors';
 
 // Global styles

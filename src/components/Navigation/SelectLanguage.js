@@ -11,9 +11,7 @@ const SelectLanguage = props => {
 
   return (
     <section>
-      <header>
-        <FormattedMessage id="selectLanguage" />
-      </header>
+      <FormattedMessage id="selectLanguage" />
       <ul>{links}</ul>
     </section>
   );

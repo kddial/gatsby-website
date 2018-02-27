@@ -3,17 +3,18 @@ import SelectLanguage from './SelectLanguage';
 import styled from 'react-emotion';
 import colors from '../../utils/colors';
 
-const HeaderDiv = styled.div`
+const NavigationDiv = styled.div`
   position: absolute;
   top: 0;
   right: 0;
   background-color: ${colors.background.grey};
+  width: 200px;
 `;
 
-const Header = props => (
-  <HeaderDiv>
+const Navigation = props => (
+  <NavigationDiv>
     <SelectLanguage langs={props.langs} />
-  </HeaderDiv>
+  </NavigationDiv>
 );
 
-export default Header;
+export default Navigation;
