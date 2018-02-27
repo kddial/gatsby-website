@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import { FormattedMessage } from 'react-intl';
+import { css } from 'emotion';
 
 const SelectLanguage = props => {
   const links = props.langs.map(lang => (
@@ -12,7 +13,7 @@ const SelectLanguage = props => {
   return (
     <section>
       <FormattedMessage id="selectLanguage" />
-      <ul>{links}</ul>
+      <ul className={css`margin-top: 0;`}>{links}</ul>
     </section>
   );
 };

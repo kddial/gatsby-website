@@ -15,6 +15,14 @@ module.exports = {
         useLangKeyLayout: true
       }
     },
-    "gatsby-plugin-emotion"
+    "gatsby-plugin-emotion",
+    {
+      resolve: "gatsby-plugin-google-fonts",
+      options: {
+        fonts: [
+          "Montserrat\:400,700"
+        ]
+      }
+    }
   ],
 };

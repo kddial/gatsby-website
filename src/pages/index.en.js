@@ -1,12 +1,11 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import SectionOne from '../components/SectionOne/SectionOne';
+import messages from '../data/messages/en'; // messages for english locale
 
 const IndexPage = () => {
   return (
     <div>
-      <h1>
-        <FormattedMessage id="s1_header" />
-      </h1>
+      <SectionOne messages={messages} />
     </div>
   );
 };

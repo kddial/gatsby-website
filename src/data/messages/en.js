@@ -5,7 +5,9 @@ module.exports = {
   s1_header: 'OneLedger',
   s1_description: 'A blockchain network built with a universal protocol enabling cross-chain access through business modularization',
   s1_buttonOne: 'Join Telegram Group',
+  s1_buttonOneUrl: 'https://t.me/oneledger',
   s1_buttonTwo: 'View Whitepaper',
+  s1_buttonTwoUrl: '',
   s1_youtubeUrl: '',
 
   /* Section Two */

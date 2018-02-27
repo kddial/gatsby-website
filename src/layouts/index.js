@@ -6,35 +6,8 @@ import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 import { IntlProvider } from 'react-intl';
 import 'intl';
 import Header from '../components/Navigation/Navigation';
-import colors from '../utils/colors';
+import '../utils/globalStyles';
 
-// Global styles
-import normalize from 'normalize.css';
-injectGlobal`
-  * {
-      font-family: -apple-system, BlinkMacSystemFont,
-             'avenir next', avenir,
-             'helvetica neue', helvetica,
-             ubuntu,
-             roboto, noto,
-             'segoe ui', arial,
-             sans-serif;
-      box-sizing: border-box;
-  };
-  a {
-    text-decoration: none;
-    color: inherit;
-  };
-  a:hover {
-    cursor: pointer;
-  };
-  h1, h2, h3, h4, h5, h6 {
-    color: ${colors.secondary.light}
-  };
-  p {
-    color: ${colors.font.dark}
-  }
-`;
 
 const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
   const url = location.pathname;
@@ -46,13 +19,12 @@ const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
   return (
     <IntlProvider locale={langKey} messages={i18nMessages}>
       <div>
-        <Helmet
-          title="OneLedger"
-          meta={[
-            { name: 'description', content: 'OneLedger' },
-            { name: 'keywords', content: 'blockchain, ledger' },
-          ]}
-        />
+        <Helmet>
+          <title>OneLedger</title>
+          <meta name="description" content="OneLedger" />
+          <meta name="keywords" content="blockchain, ledger" />
+          <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        </Helmet>
         <Header langs={langsMenu} />
         <div>{children()}</div>
       </div>

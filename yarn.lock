@@ -3068,6 +3068,10 @@ gatsby-plugin-emotion@^1.1.13:
   dependencies:
     babel-runtime "^6.26.0"
 
+gatsby-plugin-google-fonts@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-fonts/-/gatsby-plugin-google-fonts-0.0.3.tgz#36a09e7ed3b795b0a81e9404b4c487e0fdfa46ab"
+
 gatsby-plugin-i18n@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-i18n/-/gatsby-plugin-i18n-0.3.3.tgz#71891bd755837e3db703ae1fcc8d1b7b4dc5be16"

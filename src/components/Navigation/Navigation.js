@@ -4,11 +4,9 @@ import styled from 'react-emotion';
 import colors from '../../utils/colors';
 
 const NavigationDiv = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
   background-color: ${colors.background.grey};
-  width: 200px;
+  height: 70px;
+  width: 100%;
 `;
 
 const Navigation = props => (

@@ -1,14 +1,14 @@
 const colors = {
-  primary: {
-    dark: '#11405A',
-    light: '#148D9F',
+  blue: {
+    pastel: '#008DA0',
   },
-  secondary: {
-    light: '#29F0CF',
+  turquoise: {
+    vibrant: '#00f1cf',
   },
   font: {
-    dark: '#777777',
-    light: '#ffffff',
+    black: '#000000',
+    white: '#ffffff',
+    midnightBlue: '#001a46',
   },
   background: {
     grey: '#e6e6e6',
