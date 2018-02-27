@@ -1,5 +1,6 @@
 import React from 'react';
 import graphql from 'graphql';
+import { FormattedMessage } from 'react-intl';
 
 const IndexPage = ({ data }) => {
   const header =
@@ -9,7 +10,9 @@ const IndexPage = ({ data }) => {
 
   return (
     <div>
-      <h1>Header: {header}</h1>
+      <h1>
+        <FormattedMessage id="s1_header" />
+      </h1>
       <p>Welcome to your new Gatsby site.</p>
     </div>
   );

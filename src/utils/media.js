@@ -3,7 +3,7 @@ import { css } from 'react-emotion';
 const sizes = {
   large: 1024,
   mid: 832,
-  small: 640
+  small: 640,
 };
 
 // Iterate through the sizes and create a media template

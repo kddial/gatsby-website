@@ -9,7 +9,10 @@ const colors = {
   font: {
     dark: '#777777',
     light: '#ffffff',
-  }
+  },
+  background: {
+    grey: '#e6e6e6',
+  },
 };
 
 export default colors;

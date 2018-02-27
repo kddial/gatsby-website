@@ -1,26 +1,16 @@
 import React from 'react';
-import graphql from 'graphql';
+import { FormattedMessage } from 'react-intl';
+
+// !!!!! TODO: remove dato cms from this project !!!!!!!
 
 const IndexPage = ({ data }) => {
-  const header =
-    data && data.datoCmsHomePage && data.datoCmsHomePage.header
-      ? data.datoCmsHomePage.header
-      : '';
-
   return (
     <div>
-      <h1>Header: {header}</h1>
-      <p>Welcome to your new Gatsby site.</p>
+      <h1>
+        <FormattedMessage id="s1_header" />
+      </h1>
     </div>
   );
 };
 
 export default IndexPage;
-
-export const pageQuery = graphql`
-  query IndexEnQuery {
-    datoCmsHomePage(locale: { eq: "en" }) {
-      header
-    }
-  }
-`;
