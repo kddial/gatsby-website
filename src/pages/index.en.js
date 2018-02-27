@@ -1,9 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
-// !!!!! TODO: remove dato cms from this project !!!!!!!
-
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
   return (
     <div>
       <h1>

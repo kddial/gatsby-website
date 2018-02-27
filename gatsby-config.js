@@ -15,12 +15,6 @@ module.exports = {
         useLangKeyLayout: true
       }
     },
-    {
-      resolve: "gatsby-source-datocms",
-      options: {
-        apiToken: "d3fe0f9a982421b73d358bcd795db1"
-      }
-    },
     "gatsby-plugin-emotion"
   ],
 };

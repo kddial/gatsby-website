@@ -3,4 +3,3 @@
 Built using:
 - React
 - Gatsby
-- DatoCMS
