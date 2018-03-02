@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { css } from 'emotion'
 import styled from 'react-emotion';
 import colors from '../../utils/colors';
@@ -34,38 +35,59 @@ const HeaderH1 = styled.h1`
   letter-spacing: 4px;
 `;
 
-const SectionOne = props => (
-  <SectionOneDiv>
-    <HeaderH1>
-      <FormattedMessage id="s1_header" />
-    </HeaderH1>
-    <p>
-      <FormattedMessage id="s1_description" />
-    </p>
-
-    <div>
-      <ButtonA href={props.messages.s1_buttonOneUrl} target="_blank">
-        <i className={`fab fa-telegram ${IconStyles}`}></i>
-        <FormattedMessage id="s1_buttonOne" />
-      </ButtonA>
-
-      <ButtonA href={props.messages.s1_buttonTwoUrl} target="_blank">
-        <i className={`fas fa-file-alt ${IconStyles}`}></i>
-        <FormattedMessage id="s1_buttonTwo" />
-      </ButtonA>
-    </div>
-
-    <MediaHelper mobile="mobile" desktop="desktop" />
-
-
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-xs">One of three columns</div>
-        <div className="col-xs">One of three columns</div>
-        <div className="col-xs">One of three columns</div>
-      </div>
-    </div>
-  </SectionOneDiv>
+const SectionOneDesktop = props => (
+ <div>
+   qq
+ </div>
 );
+
+
+const SectionOne = (props, context) => {
+  const messages = context.messages || {};
+  const {
+    s1_buttonOneUrl = '',
+    s1_buttonTwoUrl = '',
+  } = messages;
+
+  return (
+    <SectionOneDiv>
+      <HeaderH1>
+        <FormattedMessage id="s1_header"/>
+      </HeaderH1>
+      <p>
+        <FormattedMessage id="s1_description"/>
+      </p>
+
+      <div>
+        <ButtonA href={s1_buttonOneUrl} target="_blank">
+          <i className={`fab fa-telegram ${IconStyles}`}></i>
+          <FormattedMessage id="s1_buttonOne"/>
+        </ButtonA>
+
+        <ButtonA href={s1_buttonTwoUrl} target="_blank">
+          <i className={`fas fa-file-alt ${IconStyles}`}></i>
+          <FormattedMessage id="s1_buttonTwo"/>
+        </ButtonA>
+      </div>
+
+      <MediaHelper mobile="mobile" desktop="desktop"/>
+
+
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-xs">One of three columns</div>
+          <div className="col-xs">One of three columns</div>
+          <div className="col-xs">One of three columns</div>
+        </div>
+      </div>
+    </SectionOneDiv>
+  )
+};
+
+// Mandatory when reading messages from provider
+SectionOne.contextTypes = {
+  messages: PropTypes.object,
+};
+
 
 export default SectionOne;
