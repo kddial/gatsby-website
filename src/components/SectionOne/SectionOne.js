@@ -27,6 +27,8 @@ const ButtonDiv = styled.div`
   min-width: 250px;
 `;
 
+const MobileButtonDiv = styled(ButtonDiv)``;
+
 const IconStyles = css`
   margin-right: 15px;
 `;
@@ -76,16 +78,63 @@ const SectionOneDesktop = (props, context) => {
   )
 };
 
+
+const SectionOneMobile = (props, context) => {
+  const messages = context.messages || {};
+  const {
+    s1_buttonOneUrl = '',
+    s1_buttonTwoUrl = '',
+  } = messages;
+
+  return (
+    <SectionOneDiv>
+      <HeaderH1>
+        <FormattedMessage id="s1_header"/>
+      </HeaderH1>
+      <p>
+        <FormattedMessage id="s1_description"/>
+      </p>
+
+      <div className="row" css="width: 100%;">
+        <div className="col">
+          <a href={s1_buttonOneUrl} target="_blank">
+            <MobileButtonDiv>
+              <i className={`fab fa-telegram ${IconStyles}`}></i>
+              <FormattedMessage id="s1_buttonOne"/>
+            </MobileButtonDiv>
+          </a>
+        </div>
+      </div>
+
+      <div className="row" css="width: 100%;">
+        <div className="col">
+          <a href={s1_buttonTwoUrl} target="_blank">
+            <MobileButtonDiv>
+              <i className={`fas fa-file-alt ${IconStyles}`}></i>
+              <FormattedMessage id="s1_buttonTwo"/>
+            </MobileButtonDiv>
+          </a>
+        </div>
+      </div>
+
+    </SectionOneDiv>
+  )
+};
+
+
 const SectionOne = (props) => {
   return (
     <MediaHelper
-      mobile=""
-      desktop={<SectionOneDesktop />}/>
+      mobile={<SectionOneMobile />}
+      desktop={<SectionOneDesktop />} />
   )
 };
 
 // Mandatory when reading messages from provider
 SectionOneDesktop.contextTypes = {
+  messages: PropTypes.object,
+};
+SectionOneMobile.contextTypes = {
   messages: PropTypes.object,
 };
 
