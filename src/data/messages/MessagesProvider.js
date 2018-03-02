@@ -18,4 +18,12 @@ MessagesProvider.childContextTypes = {
   messages: PropTypes.object.isRequired,
 };
 
+/* * * * * * * * * *
+ Important: Components needs to declare 'contextTypes' in order to fetch data from Provider
+ Example:
+   SectionOneDesktop.contextTypes = {
+     messages: PropTypes.object,
+   };
+ * * * * * * * * * */
+
 export default MessagesProvider;
