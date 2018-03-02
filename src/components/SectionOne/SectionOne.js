@@ -3,6 +3,7 @@ import { css } from 'emotion'
 import styled from 'react-emotion';
 import colors from '../../utils/colors';
 import { FormattedMessage } from 'react-intl';
+import MediaHelper from '../../utils/media';
 
 const SectionOneDiv = styled.div`
   background-color: #15454C;
@@ -52,6 +53,17 @@ const SectionOne = props => (
         <i className={`fas fa-file-alt ${IconStyles}`}></i>
         <FormattedMessage id="s1_buttonTwo" />
       </ButtonA>
+    </div>
+
+    <MediaHelper mobile="mobile" desktop="desktop" />
+
+
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-xs">One of three columns</div>
+        <div className="col-xs">One of three columns</div>
+        <div className="col-xs">One of three columns</div>
+      </div>
     </div>
   </SectionOneDiv>
 );

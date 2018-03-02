@@ -1,7 +1,7 @@
-import styled, { injectGlobal } from 'react-emotion';
-
-// Global styles
+import { injectGlobal } from 'react-emotion';
 import normalize from 'normalize.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 injectGlobal`
   * {
       font-family: 'Montserrat', -apple-system, BlinkMacSystemFont,

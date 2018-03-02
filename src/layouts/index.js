@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { injectGlobal } from 'react-emotion';
 import Helmet from 'react-helmet';
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 import { IntlProvider } from 'react-intl';
 import 'intl';
 import Header from '../components/Navigation/Navigation';
 import '../utils/globalStyles';
-
 
 const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
   const url = location.pathname;

@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "angeloocana.com",
   "dependencies": {
+    "bootstrap": "^4.0.0",
     "emotion": "^9.0.2",
     "emotion-server": "^9.0.2",
     "gatsby": "^1.9.63",
@@ -15,7 +16,8 @@
     "intl": "^1.2.5",
     "normalize.css": "^8.0.0",
     "react-emotion": "^9.0.2",
-    "react-intl": "^2.4.0"
+    "react-intl": "^2.4.0",
+    "react-media": "^1.8.0"
   },
   "keywords": [
     "gatsby"
