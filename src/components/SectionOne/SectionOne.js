@@ -17,13 +17,14 @@ const SectionOneDiv = styled.div`
   font-size: 18px;
 `;
 
-const ButtonA = styled.a`
+const ButtonDiv = styled.div`
   background-color: ${colors.turquoise.vibrant};
   color: ${colors.font.midnightBlue};
   border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
+  padding: 14px 10px;
+  margin: 5px;
   font-size: 14px;
+  min-width: 250px;
 `;
 
 const IconStyles = css`
@@ -35,14 +36,7 @@ const HeaderH1 = styled.h1`
   letter-spacing: 4px;
 `;
 
-const SectionOneDesktop = props => (
- <div>
-   qq
- </div>
-);
-
-
-const SectionOne = (props, context) => {
+const SectionOneDesktop = (props, context) => {
   const messages = context.messages || {};
   const {
     s1_buttonOneUrl = '',
@@ -58,34 +52,40 @@ const SectionOne = (props, context) => {
         <FormattedMessage id="s1_description"/>
       </p>
 
-      <div>
-        <ButtonA href={s1_buttonOneUrl} target="_blank">
-          <i className={`fab fa-telegram ${IconStyles}`}></i>
-          <FormattedMessage id="s1_buttonOne"/>
-        </ButtonA>
+      <div className="row">
+        <div className="col">
+          <a href={s1_buttonOneUrl} target="_blank">
+            <ButtonDiv>
+              <i className={`fab fa-telegram ${IconStyles}`}></i>
+              <FormattedMessage id="s1_buttonOne"/>
+            </ButtonDiv>
+          </a>
+        </div>
 
-        <ButtonA href={s1_buttonTwoUrl} target="_blank">
-          <i className={`fas fa-file-alt ${IconStyles}`}></i>
-          <FormattedMessage id="s1_buttonTwo"/>
-        </ButtonA>
-      </div>
-
-      <MediaHelper mobile="mobile" desktop="desktop"/>
-
-
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-xs">One of three columns</div>
-          <div className="col-xs">One of three columns</div>
-          <div className="col-xs">One of three columns</div>
+        <div className="col">
+          <a href={s1_buttonTwoUrl} target="_blank">
+            <ButtonDiv>
+              <i className={`fas fa-file-alt ${IconStyles}`}></i>
+              <FormattedMessage id="s1_buttonTwo"/>
+            </ButtonDiv>
+          </a>
         </div>
       </div>
+
     </SectionOneDiv>
   )
 };
 
+const SectionOne = (props) => {
+  return (
+    <MediaHelper
+      mobile=""
+      desktop={<SectionOneDesktop />}/>
+  )
+};
+
 // Mandatory when reading messages from provider
-SectionOne.contextTypes = {
+SectionOneDesktop.contextTypes = {
   messages: PropTypes.object,
 };
 

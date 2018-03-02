@@ -12,7 +12,7 @@ export const breakpoints = {
 
 const MediaHelper = ({ mobile, desktop }) => {
   return (
-    <Media query={{ maxWidth: (breakpoints.large - 1) }}>
+    <Media query={{ maxWidth: (breakpoints.medium - 1) }}>
       {matches => matches ? (<div>{mobile}</div>) : (<div>{desktop}</div>)}
     </Media>
   )
