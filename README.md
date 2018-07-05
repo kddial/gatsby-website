@@ -1,4 +1,4 @@
-# OneLedger website
+# gatsby website
 
 Built using:
 - React
